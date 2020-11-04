@@ -32,13 +32,14 @@ import sphinx_rtd_theme
 
 extensions = [
     'recommonmark', 'sphinx.ext.todo',
-    'sphinx.ext.githubpages', 'sphinx_rtd_theme'
+    'sphinx.ext.githubpages', 'sphinx_rtd_theme', 'sphinx_markdown_tables'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
 source_suffix = ['.rst', '.md']
+
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

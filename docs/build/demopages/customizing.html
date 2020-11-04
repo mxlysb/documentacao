@@ -196,16 +196,44 @@ Example is:</p>
 <div class="section" id="customizing-or-translating-message-alerts">
 <h2>Customizing or translating message alerts<a class="headerlink" href="#customizing-or-translating-message-alerts" title="Permalink to this headline">¶</a></h2>
 <p>The default message alerts are:</p>
-<p>|Key           | Message                  |
-|————–|————————–|
-|login_success | login success!           |
-|login_failure | invalid credentials      |
-|is_logged_in  | already logged in        |
-|logout        | Logged out!              |
-|login_required| You need to login first  |
-|access_denied | Access Denied            |
-|auth_error    | Authentication Error: {0}|</p>
-<p>NOTE: the {0} in auth_error is a required placeholder to pass in the validator error message.</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>Key</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>login_success</td>
+<td>login success!</td>
+</tr>
+<tr>
+<td>login_failure</td>
+<td>invalid credentials</td>
+</tr>
+<tr>
+<td>is_logged_in</td>
+<td>already logged in</td>
+</tr>
+<tr>
+<td>logout</td>
+<td>Logged out!</td>
+</tr>
+<tr>
+<td>login_required</td>
+<td>You need to login first</td>
+</tr>
+<tr>
+<td>access_denied</td>
+<td>Access Denied</td>
+</tr>
+<tr>
+<td>auth_error</td>
+<td>Authentication Error: {0}</td>
+</tr>
+</tbody>
+</table><p>NOTE: the {0} in auth_error is a required placeholder to pass in the validator error message.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="n">messages</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;login_success&#39;</span><span class="p">:</span> <span class="s1">&#39;Você está dentro!&#39;</span><span class="p">,</span>
