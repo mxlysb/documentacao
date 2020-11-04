@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Login Extension for Flask! &mdash; Simple Login  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Configuring" href="demopages/configuring.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> Simple Login
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demopages/configuring.html">Configuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demopages/checking.html">Checking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demopages/customizing.html">Customizing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demopages/requirements.html">Requirements</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Simple Login</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Login Extension for Flask!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="login-extension-for-flask">
+<h1>Login Extension for Flask!<a class="headerlink" href="#login-extension-for-flask" title="Permalink to this headline">¶</a></h1>
+<p>The simplest way to add login to flask!</p>
+</div>
+<div class="section" id="so-why-flask-simple-login">
+<h1>So why Flask Simple Login?<a class="headerlink" href="#so-why-flask-simple-login" title="Permalink to this headline">¶</a></h1>
+<p>Sometimes you need something simple for that small project or for prototyping.</p>
+</div>
+<div class="section" id="flask-simple-login">
+<h1>Flask Simple Login<a class="headerlink" href="#flask-simple-login" title="Permalink to this headline">¶</a></h1>
+<p>What it provides:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Login and Logout forms and pages</p></li>
+<li><p>Function to check if user is logged-in</p></li>
+<li><p>Decorator for views</p></li>
+<li><p>Easy and customizable login_checker</p></li>
+<li><p>Basic-Auth for API endpoints</p></li>
+</ul>
+</div></blockquote>
+<p>What it does not provide:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Database Integration</p></li>
+<li><p>Password management</p></li>
+<li><p>API authentication with Token or JWT</p></li>
+<li><p>Role or user based access control</p></li>
+</ul>
+</div></blockquote>
+<p>of course you can easily implement all above by your own. Take a look at <a class="reference external" href="https://github.com/flask-extensions/flask_simplelogin/tree/master/example">example</a>.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Index:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demopages/configuring.html">Configuring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demopages/configuring.html#using-a-custom-login-checker">Using a custom login checker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demopages/configuring.html#encrypt-passwords">Encrypt passwords</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demopages/checking.html">Checking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demopages/checking.html#checking-if-user-is-logged-in">Checking if user is logged in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demopages/checking.html#protecting-your-views">Protecting your views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demopages/checking.html#protecting-flask-admin-views">Protecting Flask Admin views</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demopages/customizing.html">Customizing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demopages/customizing.html#customizing-templates">Customizing templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demopages/customizing.html#customizing-or-translating-message-alerts">Customizing or translating message alerts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="demopages/customizing.html#custom-validators">Custom validators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="demopages/requirements.html">Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="demopages/requirements.html#integrations">Integrations</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="references">
+<h1>References:<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="demopages/configuring.html" class="btn btn-neutral float-right" title="Configuring" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Maely Brandão
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

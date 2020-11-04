@@ -1,0 +1,4 @@
+Integrations
+============
+
+Do you need Access Control? you can easily mix flask_simplelogin with flask_allows

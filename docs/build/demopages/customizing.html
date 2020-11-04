@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Customizing &mdash; Simple Login  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Requirements" href="requirements.html" />
+    <link rel="prev" title="Checking" href="checking.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Simple Login
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Index:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="configuring.html">Configuring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="checking.html">Checking</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Customizing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#customizing-templates">Customizing templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customizing-or-translating-message-alerts">Customizing or translating message alerts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-validators">Custom validators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Simple Login</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Customizing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/demopages/customizing.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="customizing">
+<h1>Customizing<a class="headerlink" href="#customizing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="customizing-templates">
+<h2>Customizing templates<a class="headerlink" href="#customizing-templates" title="Permalink to this headline">¶</a></h2>
+<p>There are only one template to customize and it is called <code class="docutils literal notranslate"><span class="pre">login.html</span></code>.
+Example is:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s1">&#39;base.html&#39;</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">title</span> <span class="o">%</span><span class="p">}</span><span class="n">Login</span><span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">messages</span> <span class="o">%</span><span class="p">}</span>
+   <span class="p">{{</span><span class="nb">super</span><span class="p">()}}</span>
+   <span class="p">{</span><span class="o">%</span><span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">errors</span> <span class="o">%</span><span class="p">}</span>
+     <span class="o">&lt;</span><span class="n">ul</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;alert alert-danger&quot;</span><span class="o">&gt;</span>
+       <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">field</span><span class="p">,</span> <span class="n">errors</span> <span class="ow">in</span> <span class="n">form</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="o">%</span><span class="p">}</span>
+         <span class="o">&lt;</span><span class="n">li</span><span class="o">&gt;</span><span class="p">{{</span><span class="n">field</span><span class="p">}}</span> <span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">errors</span> <span class="o">%</span><span class="p">}{{</span> <span class="n">error</span> <span class="p">}}{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">li</span><span class="o">&gt;</span>
+       <span class="p">{</span><span class="o">%</span> <span class="n">endfor</span> <span class="o">%</span><span class="p">}</span>
+     <span class="o">&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
+   <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">page_body</span> <span class="o">%</span><span class="p">}</span>
+       <span class="o">&lt;</span><span class="n">form</span> <span class="n">action</span><span class="o">=</span><span class="s2">&quot;{{ url_for(&#39;simplelogin.login&#39;, next=request.args.get(&#39;next&#39;, &#39;/&#39;)) }}&quot;</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;form-group&quot;</span><span class="o">&gt;</span>
+            <span class="p">{{</span> <span class="n">form</span><span class="o">.</span><span class="n">csrf_token</span> <span class="p">}}</span>
+            <span class="p">{{</span><span class="n">form</span><span class="o">.</span><span class="n">username</span><span class="o">.</span><span class="n">label</span><span class="p">}}</span><span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;form-control&quot;</span><span class="o">&gt;</span><span class="p">{{</span> <span class="n">form</span><span class="o">.</span><span class="n">username</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+            <span class="p">{{</span><span class="n">form</span><span class="o">.</span><span class="n">password</span><span class="o">.</span><span class="n">label</span><span class="p">}}</span><span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;form-control&quot;</span><span class="o">&gt;</span> <span class="p">{{</span> <span class="n">form</span><span class="o">.</span><span class="n">password</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+           <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Send&quot;</span><span class="o">&gt;</span>
+       <span class="o">&lt;/</span><span class="n">form</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Take a look at the <a class="reference external" href="https://github.com/flask-extensions/flask_simplelogin/tree/master/example">example app</a>.</p>
+<p>And you can customize it in anyway you want and need, it receives a <code class="docutils literal notranslate"><span class="pre">form</span></code> in context and it is a <code class="docutils literal notranslate"><span class="pre">WTF</span> <span class="pre">form</span></code> the submit should be done to <code class="docutils literal notranslate"><span class="pre">request.path</span></code> which is the same <code class="docutils literal notranslate"><span class="pre">/login</span></code> view.</p>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">if</span> <span class="pre">is_logged_in()</span> <span class="pre">%}</span></code> in your template if needed.</p>
+</div>
+<div class="section" id="customizing-or-translating-message-alerts">
+<h2>Customizing or translating message alerts<a class="headerlink" href="#customizing-or-translating-message-alerts" title="Permalink to this headline">¶</a></h2>
+<p>The default message alerts are:</p>
+<p>|Key           | Message                  |
+|————–|————————–|
+|login_success | login success!           |
+|login_failure | invalid credentials      |
+|is_logged_in  | already logged in        |
+|logout        | Logged out!              |
+|login_required| You need to login first  |
+|access_denied | Access Denied            |
+|auth_error    | Authentication Error: {0}|</p>
+<p>NOTE: the {0} in auth_error is a required placeholder to pass in the validator error message.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">messages</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;login_success&#39;</span><span class="p">:</span> <span class="s1">&#39;Você está dentro!&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;login_failure&#39;</span><span class="p">:</span> <span class="s1">&#39;ungültige Anmeldeinformationen&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;is_logged_in&#39;</span><span class="p">:</span> <span class="s1">&#39;Iam initium&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;logout&#39;</span><span class="p">:</span> <span class="s1">&#39;Déconnecté!&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;login_required&#39;</span><span class="p">:</span> <span class="s1">&#39;Devi prima accedere&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;access_denied&#39;</span><span class="p">:</span> <span class="s1">&#39;Acceso denegado&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;auth_error&#39;</span><span class="p">:</span> <span class="s1">&#39;授權錯誤： </span><span class="si">{0}</span><span class="s1">&#39;</span>
+<span class="p">}</span>
+<span class="n">SimpleLogin</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="custom-validators">
+<h2>Custom validators<a class="headerlink" href="#custom-validators" title="Permalink to this headline">¶</a></h2>
+<p>Pass <code class="docutils literal notranslate"><span class="pre">must</span></code> argument to <code class="docutils literal notranslate"><span class="pre">login_required</span></code> decorator, it can be a function or a list of <code class="docutils literal notranslate"><span class="pre">functions</span></code> if function returns <code class="docutils literal notranslate"><span class="pre">None</span></code> means <b>No</b> error and validator passed. If function returns an “<code class="docutils literal notranslate"><span class="pre">Error</span> <span class="pre">message</span></code>” means validator did not passed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">be_admin</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Validator to check if user has admin role&quot;&quot;&quot;</span>
+    <span class="n">user_data</span> <span class="o">=</span> <span class="n">my_users</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">user_data</span> <span class="ow">or</span> <span class="s1">&#39;admin&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">user_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;roles&#39;</span><span class="p">,</span> <span class="p">[]):</span>
+        <span class="k">return</span> <span class="s2">&quot;User does not have admin role&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">have_approval</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Validator: all users approved so return None&quot;&quot;&quot;</span>
+    <span class="k">return</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/protected&#39;</span><span class="p">)</span>
+<span class="nd">@login_required</span><span class="p">(</span><span class="n">must</span><span class="o">=</span><span class="p">[</span><span class="n">be_admin</span><span class="p">,</span> <span class="n">have_approval</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">protected</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;secret.html&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Take a look at the <a class="reference external" href="https://github.com/flask-extensions/flask_simplelogin/tree/master/example">example app</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="requirements.html" class="btn btn-neutral float-right" title="Requirements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="checking.html" class="btn btn-neutral float-left" title="Checking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Maely Brandão
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
