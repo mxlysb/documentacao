@@ -1,6 +1,0 @@
-Addicional
-===========
-
-.. warning::
-
-    This is a warning bank

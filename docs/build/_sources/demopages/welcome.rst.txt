@@ -1,6 +1,0 @@
-welcome
-=======
-
-.. _url: https://www.google.com/
-
-this is how you define a url_ link.
